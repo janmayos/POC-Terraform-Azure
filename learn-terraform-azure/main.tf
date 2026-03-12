@@ -8,6 +8,14 @@ terraform {
   }
 
   required_version = ">= 1.1.0"
+  cloud {
+
+    organization = "POC-Tutorial"
+
+    workspaces {
+      name = "learn-terraform-azure"
+    }
+  }
 }
 
 provider "azurerm" {
