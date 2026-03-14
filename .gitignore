@@ -28,3 +28,4 @@ terraform.rc
 *.plan
 
 .terraform.lock.hcl
+id_rsa_tf
