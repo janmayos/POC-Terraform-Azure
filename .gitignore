@@ -29,3 +29,5 @@ terraform.rc
 
 .terraform.lock.hcl
 id_rsa_tf
+private_key.pem
+*.pem

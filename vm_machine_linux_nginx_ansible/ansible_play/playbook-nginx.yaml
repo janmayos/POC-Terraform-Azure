@@ -1,0 +1,49 @@
+---
+- name: Aprovisionar servidores de azure
+  hosts: all
+  
+  # vars:
+  #   usuario: deploy
+
+  tasks:
+
+    - name: Instalacion de aplicacion Nginx
+      become: true
+      apt:
+        name: nginx
+        state: present
+        
+    - name: Imprimir Informacion de Nginx
+      debug:
+        msg: "{{ ansible_facts }}"
+
+
+    # - name: Agregar usuario {{ usuario }}
+    #   become: true
+    #   user:
+    #     name: "{{ usuario }}"
+    #     groups: sudo
+    #     append: true 
+    #     state: present
+    #     create_home: true
+    #     password: "{{ password_usuario | password_hash('sha512') }}"
+
+    # - name: Actualizar repositorios y paquetes
+    #   become: true
+    #   apt:
+    #     update_cache: yes
+
+    # - name: Instalacion de utilitarios basicos
+    #   become: true
+    #   apt: 
+    #     name: "{{ item }}"
+      
+    #   loop:
+    #     - nginx
+    #     # - curl
+    #     # - wget
+    #     # - git
+    #     # - telnet
+    
+      
+        
